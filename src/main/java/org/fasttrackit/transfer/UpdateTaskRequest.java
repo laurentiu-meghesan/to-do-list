@@ -3,10 +3,11 @@ package org.fasttrackit.transfer;
 import java.time.LocalDate;
 
 // DTO (Data transfer object)
-public class CreateTaskRequest {
+public class UpdateTaskRequest {
 
     private String description;
     private LocalDate deadline;
+    private boolean done;
 
     public String getDescription() {
         return description;
@@ -24,11 +25,21 @@ public class CreateTaskRequest {
         this.deadline = deadline;
     }
 
+    public boolean isDone() {
+        return done;
+    }
+
     @Override
     public String toString() {
-        return "CreateTaskRequest{" +
+        return "UpdateTaskRequest{" +
                 "description='" + description + '\'' +
                 ", deadline=" + deadline +
+                ", done=" + done +
                 '}';
     }
+
+    public void setDone(boolean done) {
+        this.done = done;
+    }
+
 }
